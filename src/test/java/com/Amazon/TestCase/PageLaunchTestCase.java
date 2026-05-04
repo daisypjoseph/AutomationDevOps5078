@@ -12,9 +12,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PageLaunchTestCase {
-
 	WebDriver driver;
-
 	@Parameters({"bname"})
 	@Test
 	public void browserTest(String bname) throws MalformedURLException, InterruptedException {
@@ -40,7 +38,5 @@ public class PageLaunchTestCase {
 		Thread.sleep(15000);
 		System.out.println("Application Executing Parallely");
 		driver.quit();
-
-		
 	}
 }
