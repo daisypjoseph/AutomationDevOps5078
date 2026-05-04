@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-03T19:51:10 IST" name="Default suite" finished-at="2026-05-03T19:51:38 IST" duration-ms="27396">
+  <suite started-at="2026-05-04T11:42:20 IST" name="Suite" finished-at="2026-05-04T11:43:38 IST" duration-ms="78433">
     <groups>
     </groups>
-    <test started-at="2026-05-03T19:51:10 IST" name="Default test" finished-at="2026-05-03T19:51:38 IST" duration-ms="27396">
+    <test started-at="2026-05-04T11:42:20 IST" name="Test3" finished-at="2026-05-04T11:43:15 IST" duration-ms="55256">
       <class name="com.Amazon.TestCase.PageLaunchTestCase">
-        <test-method signature="browserTest()[pri:0, instance:com.Amazon.TestCase.PageLaunchTestCase@2a4fb17b]" started-at="2026-05-03T19:51:11 IST" name="browserTest" finished-at="2026-05-03T19:51:38 IST" duration-ms="27278" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.Amazon.TestCase.PageLaunchTestCase@62ddbd7e]" started-at="2026-05-04T11:42:20 IST" name="browserTest" finished-at="2026-05-04T11:43:15 IST" duration-ms="55095" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserTest -->
       </class> <!-- com.Amazon.TestCase.PageLaunchTestCase -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test3 -->
+    <test started-at="2026-05-04T11:42:20 IST" name="Test1" finished-at="2026-05-04T11:43:16 IST" duration-ms="56045">
+      <class name="com.Amazon.TestCase.PageLaunchTestCase">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.Amazon.TestCase.PageLaunchTestCase@4d5d943d]" started-at="2026-05-04T11:42:20 IST" name="browserTest" finished-at="2026-05-04T11:43:16 IST" duration-ms="55896" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTest -->
+      </class> <!-- com.Amazon.TestCase.PageLaunchTestCase -->
+    </test> <!-- Test1 -->
+    <test started-at="2026-05-04T11:42:20 IST" name="Test2" finished-at="2026-05-04T11:43:38 IST" duration-ms="78433">
+      <class name="com.Amazon.TestCase.PageLaunchTestCase">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.Amazon.TestCase.PageLaunchTestCase@7eac9008]" started-at="2026-05-04T11:42:20 IST" name="browserTest" finished-at="2026-05-04T11:43:38 IST" duration-ms="78287" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTest -->
+      </class> <!-- com.Amazon.TestCase.PageLaunchTestCase -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
 </testng-results>

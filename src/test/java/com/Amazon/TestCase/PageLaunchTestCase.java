@@ -4,33 +4,43 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
 public class PageLaunchTestCase {
-	
-	 WebDriver driver;
-  @Test
-  public void browserTest() throws MalformedURLException, InterruptedException {
-	  
-	  ChromeOptions options =new ChromeOptions();
-	  driver=new RemoteWebDriver(new URL("http://localhost:4444"),options);
-	  Thread.sleep(10000);
-	  driver.get("https://www.amazon.in/");
-	  Thread.sleep(10000);
-	  driver.quit();
-	  
-	  /*if(bname.equals("Chrome"){
-		  
-	  } 
-	  String bname
-	  
-	  System.out.println("First Test Case!!");
-	  driver=new ChromeDriver();
-	  driver.get("https://www.amazon.in/");
-	  */
-  }
+
+	WebDriver driver;
+
+	@Parameters({"bname"})
+	@Test
+	public void browserTest(String bname) throws MalformedURLException, InterruptedException {
+
+		if (bname.equalsIgnoreCase("Chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+			System.out.println("Connection Established with Chrome Browser");
+		}
+		if (bname.equalsIgnoreCase("firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+			System.out.println("Connection Established with FireFox Browser");
+		}
+		if (bname.equalsIgnoreCase("edge")) {
+			EdgeOptions options = new EdgeOptions();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+			System.out.println("Connection Established with Edge Browser");
+		}
+
+		Thread.sleep(15000);
+		driver.get("https://www.amazon.in/");
+		Thread.sleep(15000);
+		System.out.println("Application Executing Parallely");
+		driver.quit();
+
+		
+	}
 }
