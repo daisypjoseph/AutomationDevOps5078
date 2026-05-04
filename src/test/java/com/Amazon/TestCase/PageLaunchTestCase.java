@@ -33,9 +33,9 @@ public class PageLaunchTestCase {
 			System.out.println("Connection Established with Edge Browser");
 		}
 
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		driver.get("https://www.amazon.in/");
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		System.out.println("Application Executing Parallely");
 		driver.quit();
 	}
